@@ -1,14 +1,23 @@
 from pydantic import BaseModel, EmailStr
 
+
 class EmailSchema(BaseModel):
     email: EmailStr
+
+
+class LoginSchema(BaseModel):
+    email: EmailStr
+    password: str
+
 
 class OTPVerify(BaseModel):
     email: EmailStr
     otp: str
 
+
 class TOTPVerify(BaseModel):
     code: str
+
 
 class UserOut(BaseModel):
     id: str
@@ -18,6 +27,7 @@ class UserOut(BaseModel):
     class Config:
         from_attributes = True
 
+
 class SignupSchema(BaseModel):
     f_name: str
     l_name: str
@@ -26,6 +36,7 @@ class SignupSchema(BaseModel):
 
     class Config:
         extra = "ignore"
+
 
 class SignupVerifySchema(BaseModel):
     email: EmailStr
