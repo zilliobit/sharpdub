@@ -1,0 +1,113 @@
+title: Translate Everything with [SharpDub]{class="text-primary"} Instantly
+description: SharpDub helps you translate documents, XLF files, videos, and audio using AI. Fast, accurate, and production-ready for businesses of all sizes.
+seo:
+  title: SharpDub – AI Document & Multimedia Translator
+  description: Translate your files and media effortlessly with SharpDub. AI-powered, secure, and easy-to-use SaaS solution for teams and enterprises.
+navigation: false
+hero:
+  links:
+    - label: Get Started
+      icon: i-lucide-arrow-right
+      trailing: true
+      to: /signup
+      size: xl
+    - label: View on GitHub
+      icon: i-simple-icons-github
+      size: xl
+      color: neutral
+      variant: subtle
+      to: https://github.com/your-repo/sharpdub
+      target: _blank
+sections:
+  - title: Powered by AI Technology
+    description: SharpDub leverages cutting-edge AI models to translate documents, XLF files, videos, and audio automatically. Streamline your workflow without any manual effort.
+    id: features
+    orientation: horizontal
+    features:
+      - name: Document Translation
+        description: Instantly translate Word, PDF, XLF, and other text-based files with precision and context awareness.
+        icon: i-lucide-file-text
+      - name: Audio & Video Translation
+        description: Convert speech from audio and video into multiple languages with automatic subtitles and voice translations.
+        icon: i-lucide-mic
+      - name: Multi-Language Support
+        description: Support for over 100 languages with AI-powered accuracy, ensuring context and nuance are preserved.
+        icon: i-lucide-globe
+  - title: Built for Modern Teams
+    description: Everything you need to handle translation workflows efficiently. SharpDub saves time, improves accuracy, and integrates easily with your tools.
+    orientation: horizontal
+    reverse: true
+    features:
+      - name: Enterprise Ready
+        description: Secure cloud-based translation for teams, with roles, permissions, and collaboration features.
+        icon: i-lucide-shield
+      - name: Fast & Accurate
+        description: AI models optimize translation speed without compromising quality, even for large files or long videos.
+        icon: i-lucide-zap
+      - name: Seamless Integration
+        description: Connect SharpDub to your existing workflow with APIs, cloud storage, and team management tools.
+        icon: i-lucide-settings
+features:
+  title: Why Choose SharpDub
+  description: Focus on your content while SharpDub handles translation intelligently. Enterprise-grade tools, AI accuracy, and user-friendly interfaces.
+  items:
+    - title: AI-Powered Accuracy
+      description: State-of-the-art models ensure translations are contextually correct across text, audio, and video.
+      icon: i-lucide-brain
+    - title: Intuitive Design
+      description: Clean, responsive UI powered by Zilliobit components for smooth workflow management.
+      icon: i-lucide-palette
+    - title: Secure & Compliant
+      description: Built with enterprise-grade security, GDPR, and privacy compliance in mind.
+      icon: i-lucide-lock
+    - title: Developer Friendly
+      description: API access, webhooks, and integration guides for automation and developer workflows.
+      icon: i-lucide-terminal
+    - title: Multi-Format Support
+      description: Translate text files, XLF, audio files, and video subtitles effortlessly.
+      icon: i-lucide-file
+    - title: Cloud Ready
+      description: Scalable cloud infrastructure to handle any volume of translations with low latency.
+      icon: i-lucide-cloud
+testimonials:
+  headline: Loved by Professionals
+  title: Trusted by Teams Worldwide
+  description: SharpDub helps professionals translate faster, save time, and reach global audiences seamlessly.
+  items:
+    - quote: SharpDub transformed our localization workflow. We can now translate XLF files and videos automatically without errors.
+      user:
+        name: Alice Morgan
+        description: Localization Manager at TechNova
+        avatar:
+          src: https://i.pravatar.cc/120?img=15
+    - quote: The AI audio translation is amazing! Our international clients understand our videos instantly.
+      user:
+        name: David Lin
+        description: Content Director at MediaFlow
+        avatar:
+          src: https://i.pravatar.cc/120?img=16
+    - quote: SharpDub saved us weeks of manual translation work. The platform is fast, accurate, and reliable.
+      user:
+        name: Priya Singh
+        description: Product Lead at GlobalDocs
+        avatar:
+          src: https://i.pravatar.cc/120?img=17
+    - quote: SharpDub saved us weeks of manual translation work. The platform is fast, accurate, and reliable.
+      user:
+        name: Priya Singh
+        description: Product Lead at GlobalDocs
+        avatar:
+          src: https://i.pravatar.cc/120?img=17
+cta:
+  title: Ready to Translate Anything Instantly?
+  description: Start using SharpDub today to translate documents, XLF files, videos, and audio in seconds.
+  links:
+    - label: Get Started
+      to: /signup
+      target: _blank
+      trailingIcon: i-lucide-arrow-right
+    - label: Learn More
+      to: /docs
+      target: _blank
+      variant: subtle
+      icon: i-lucide-book-open
