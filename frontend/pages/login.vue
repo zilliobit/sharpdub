@@ -2,7 +2,6 @@
 import * as z from "zod";
 import type { FormSubmitEvent } from "@nuxt/ui";
 import { apiFetch } from "../utils/headers";
-import type { APIResponse } from "~/types";
 
 definePageMeta({
   layout: "auth",
@@ -66,7 +65,7 @@ async function onSubmit(payload: FormSubmitEvent<Schema>) {
   loading.value = true;
 
   try {
-    const data = await apiFetch<APIResponse>("/auth/login", {
+    const data = await apiFetch<{ success: boolean; message?: string }>("/auth/login", {
       method: "POST",
       body: {
         email: payload.data.email,
@@ -74,23 +73,45 @@ async function onSubmit(payload: FormSubmitEvent<Schema>) {
       },
     });
 
-    if (data.success) {
+    if (data?.success) {
       toast.add({ title: "Welcome back!", description: "Logged in successfully." });
-      navigateTo("/dashboard");
+      await navigateTo("/dashboard");
     } else {
       toast.add({
         title: "Login failed",
-        description: data.message || "Invalid credentials",
+        description: data?.message || "Invalid credentials. Please try again.",
         color: "error",
       });
     }
   } catch (err: any) {
+    const status = err?.response?.status;
     const detail = err?.response?._data?.detail;
-    toast.add({
-      title: "Login failed",
-      description: detail || "Something went wrong. Please try again.",
-      color: "error",
-    });
+
+    if (status === 401) {
+      toast.add({
+        title: "Invalid credentials",
+        description: "Incorrect email or password.",
+        color: "error",
+      });
+    } else if (status === 422) {
+      toast.add({
+        title: "Invalid request",
+        description: "Please check your email and password.",
+        color: "error",
+      });
+    } else if (status === 429) {
+      toast.add({
+        title: "Too many attempts",
+        description: "Please wait a moment before trying again.",
+        color: "error",
+      });
+    } else {
+      toast.add({
+        title: "Something went wrong",
+        description: detail || "Unable to connect. Please try again.",
+        color: "error",
+      });
+    }
   } finally {
     loading.value = false;
   }
